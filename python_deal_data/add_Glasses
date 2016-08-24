@@ -1,0 +1,27 @@
+import os
+man_path = r'D:\zhangjichao\gender_pre\train\0'
+woman_path = r'D:\zhangjichao\gender_pre\train\1'
+
+lines = open('D:\\filename.txt' , 'r')
+for line in lines.readlines():
+    file = man_path + '\\' + line
+    if os.path.exists(file):
+        m_file = os.split('.jpg' , 1)[0]
+        rename(file , man_path + '\\' + m_file + '#0#.jpg')
+    else:
+        file = woman_path + '\\' + line
+        m_file = os.split('.jpg' , 1)[0]
+        rename(file , woman_path + '\\' + m_file + '#0#.jpg')
+lines.close()
+
+lines = open('D:\\filename2.txt' , 'r')
+for line in lines.readlines():
+    file = man_path + '\\' + line
+    if os.path.exists(file):
+        m_file = os.split('.jpg' , 1)[0]
+        rename(file , man_path + '\\' + m_file + '#0#.jpg')
+    else:
+        file = woman_path + '\\' + line
+        m_file = os.split('.jpg' , 1)[0]
+        rename(file , woman_path + '\\' + m_file + '#0#.jpg')
+lines.close()

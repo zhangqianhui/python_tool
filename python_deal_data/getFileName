@@ -1,0 +1,23 @@
+import os
+glass_path = r'D:\zhangjichao\forMultithree\test\glasses'
+no_path = r'D:\zhangjichao\forMultithree\test\no'
+sun_path = r'D:\zhangjichao\forMultithree\test\sun'
+
+files = os.listdir(glass_path)
+output= open('D:\\test_filename.txt' , 'w')
+for f in files:
+    output.write(f+'\n')
+output.close()
+
+files = os.listdir(no_path)
+output= open('D:\\test_filename2.txt' , 'w')
+for f in files:
+    output.write(f+'\n')
+output.close()
+
+files = os.listdir(sun_path)
+output= open('D:\\test_filename3.txt' , 'w')
+for f in files:
+    output.write(f+'\n')
+output.close()
+

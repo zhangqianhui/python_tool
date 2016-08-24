@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+from numpy.random import rand
+import numpy
+import os
+import Image
+
+plt.xlim(xmax=300,xmin=0)
+plt.ylim(ymax=300,ymin=0)
+
+x= numpy.random.uniform(2,10)
+y= numpy.random.uniform(2,10)
+plt.plot(x,y,'ro',label='point',color='red')
+
+x= numpy.random.uniform(2,10)
+y= numpy.random.uniform(2,10)
+plt.plot(x,y,'ro',label='point',color='green')
+
+plt.legend()
+plt.grid(True)
+plt.show()
