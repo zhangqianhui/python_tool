@@ -1,0 +1,7 @@
+mean_binary_proto ='/home/VISU/llliu/data/vgg_mean.binaryproto'
+blob = caffe.proto.caffe_pb2.BlobProto()
+data = open( mean_binary_proto , 'rb' ).read()
+blob.ParseFromString(data)
+mean_arr = np.array( caffe.io.blobproto_to_array(blob) )
+
+transformer.set_mean('data', mean_arr[0])
